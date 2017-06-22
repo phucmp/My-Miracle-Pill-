@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var addressText: UITextField!
+    @IBOutlet weak var cityText: UITextField!
     @IBOutlet weak var StatePicker: UIPickerView!
     @IBOutlet weak var StatePickerBtn: UIButton!
     @IBOutlet weak var Country: UILabel!
@@ -120,7 +123,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     @IBAction func BuyBtnPressed(_ sender: Any) {
-        if ZipText.text != "" {
+        var full = true
+        for textfield in [nameText, addressText, cityText, CountryText, ZipText] {
+            if textfield?.text == "" {
+                full = false
+                break
+            }
+        }
+        
+        if full == true {
             for view in self.view.subviews as [UIView]{
                 view.isHidden = true
             }

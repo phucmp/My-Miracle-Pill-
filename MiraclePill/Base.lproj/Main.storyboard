@@ -250,6 +250,9 @@
                         <outlet property="SuccessImg" destination="2Ek-Rs-r7b" id="9Fk-CO-MV4"/>
                         <outlet property="Zip" destination="hy8-ug-bJr" id="lz9-qa-ETo"/>
                         <outlet property="ZipText" destination="i0e-n8-Fc2" id="wCR-PG-ZrS"/>
+                        <outlet property="addressText" destination="Slv-sb-0yy" id="76M-4v-dKK"/>
+                        <outlet property="cityText" destination="NWs-SH-enD" id="S2V-11-RI6"/>
+                        <outlet property="nameText" destination="cda-6b-cr4" id="Hc4-uL-dik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
