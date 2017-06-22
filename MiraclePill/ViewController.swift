@@ -120,10 +120,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     @IBAction func BuyBtnPressed(_ sender: Any) {
-        for view in self.view.subviews as [UIView]{
-            view.isHidden = true
+        if ZipText.text != "" {
+            for view in self.view.subviews as [UIView]{
+                view.isHidden = true
+            }
+            SuccessImg.isHidden = false
         }
-        SuccessImg.isHidden = false
     }
     
 }
