@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var addressText: UITextField!
@@ -84,6 +84,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Do any additional setup after loading the view, typically from a nib.
         StatePicker.dataSource = self
         StatePicker.delegate = self
+        nameText.delegate = self
+        addressText.delegate = self
+        cityText.delegate = self
+        CountryText.delegate = self
+        ZipText.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,6 +125,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         Zip.isHidden = false
         ZipText.isHidden = false
         BuyBtn.isHidden = false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     @IBAction func BuyBtnPressed(_ sender: Any) {
