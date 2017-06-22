@@ -5,7 +5,6 @@
 //  Created by Paul Minh Pham on 6/21/17.
 //  Copyright © 2017 Paul Minh Pham. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
@@ -138,6 +137,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         for textfield in [nameText, addressText, cityText, CountryText, ZipText] {
             if textfield?.text == "" {
                 full = false
+                textfield?.layer.borderColor = UIColor.red.cgColor
+                textfield?.layer.borderWidth = 1.0
                 break
             }
         }
