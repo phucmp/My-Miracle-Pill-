@@ -1,3 +1,3 @@
 # My-Miracle-Pill-
-Following the instructions of Mark Price from Udemy.
-I will be adding a feature where you need to have all sections filled with input before pressing the "Buy Now" Button. If any of the field is not filled, it will highlight the area to fill it in.
+Following the instructions of Mark Price from Udemy. \n
+There is a feature where the users need to have all sections filled with input before pressing the "Buy Now" Button. If the user decide to press the "Buy Now" Button without filling in the respected fields the sections will then be highlighted.
