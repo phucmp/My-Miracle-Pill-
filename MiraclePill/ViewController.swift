@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var BuyBtn: UIButton!
     @IBOutlet weak var SuccessImg: UIImageView!
 
-    
+    var stateFilled = false
     let states = ["Alaska",
                   "Alabama",
                   "Arkansas",
@@ -125,6 +125,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         Zip.isHidden = false
         ZipText.isHidden = false
         BuyBtn.isHidden = false
+        stateFilled = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -141,7 +142,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             }
         }
         
-        if full == true {
+        if stateFilled && full {
             for view in self.view.subviews as [UIView]{
                 view.isHidden = true
             }
