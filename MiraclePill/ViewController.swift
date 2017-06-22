@@ -137,9 +137,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         for textfield in [nameText, addressText, cityText, CountryText, ZipText] {
             if textfield?.text == "" {
                 full = false
-                textfield?.layer.borderColor = UIColor.red.cgColor
-                textfield?.layer.borderWidth = 1.0
-                break
+                textfield?.backgroundColor = UIColor.red
+            }
+            else {
+                textfield?.backgroundColor = UIColor.clear
             }
         }
         
